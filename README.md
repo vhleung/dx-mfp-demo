@@ -1,6 +1,6 @@
 # dx-mfp-demo
 
-A simple Android app for XDX Xcelerators.
+A simple Android demo app for XDX Xcelerators.
 
 Features:
   * Opens up a hardcoded URL in an Android WebView
