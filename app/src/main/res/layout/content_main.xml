@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".ServerConnectActivity">
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:text="@string/ping_mobilefirst_txt"
+        android:id="@+id/ping_mobilefirst_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:textAllCaps="false"
+        android:background="#325C80"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connection_status_id"
+        android:textSize="16dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/title_id"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/server_url_id"
+        android:textSize="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/connection_status_id"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:text="@string/hello_mobilefirst_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_id"
+        android:textSize="34dp"
+        android:layout_marginTop="83dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
+
+
+</RelativeLayout>

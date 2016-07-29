@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">GraysOnline</string>
+
+    <string name="ping_mobilefirst_txt">Ping MobileFirst Server</string>
+    <string name="hello_mobilefirst_txt">Hello MobileFirst</string>
+
+</resources>
