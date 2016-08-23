@@ -14,7 +14,6 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -26,6 +25,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseLis
 import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 import com.worklight.wlclient.api.*;
 import com.worklight.wlclient.auth.AccessToken;
+
+import im.delight.android.webview.AdvancedWebView;
 
 public class ServerConnectActivity extends AppCompatActivity implements OnClickListener, MFPPushNotificationListener {
 
@@ -44,7 +45,7 @@ public class ServerConnectActivity extends AppCompatActivity implements OnClickL
         setupMobileFirst();
 
         setContentView(R.layout.content_webview);
-        webViewLabel = (WebView) findViewById(R.id.webview_id);
+        webViewLabel = (AdvancedWebView) findViewById(R.id.webview_id);
 
         // Enable remote debug (in Chrome DevTool)
         webViewLabel.setWebContentsDebuggingEnabled(true);
@@ -52,17 +53,11 @@ public class ServerConnectActivity extends AppCompatActivity implements OnClickL
         // Enable hardware acceleration
         webViewLabel.setLayerType(View.LAYER_TYPE_HARDWARE, null);
 
-        // Enable Javascript
         WebSettings webSettings = webViewLabel.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
 
         // Set user agent string (pretend we are Worklight)
         String userAgent = webSettings.getUserAgentString();
         webSettings.setUserAgentString(userAgent + "/Worklight/8.0.0.0");
-
-        // Force links and redirects to open in the WebView instead of in a browser
-        webViewLabel.setWebViewClient(new WebViewClient());
 
         // Load remote URL
         webViewLabel.loadUrl("http://graysonline.ibmcollabcloud.com/wps/portal/Home/home");
