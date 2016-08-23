@@ -14,6 +14,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -54,6 +55,7 @@ public class ServerConnectActivity extends AppCompatActivity implements OnClickL
         // Enable Javascript
         WebSettings webSettings = webViewLabel.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
 
         // Set user agent string (pretend we are Worklight)
         String userAgent = webSettings.getUserAgentString();
